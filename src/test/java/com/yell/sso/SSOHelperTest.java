@@ -5,7 +5,6 @@ import org.japybara.WebTestCase;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 import java.io.IOException;
@@ -17,7 +16,6 @@ public class SSOHelperTest extends WebTestCase {
         HtmlUnitDriver htmlUnitDriver = new HtmlUnitDriver(BrowserVersion.INTERNET_EXPLORER_8);
         htmlUnitDriver.setJavascriptEnabled(false);
         setDriver(htmlUnitDriver);
-        // setDriver(new ChromeDriver());
     }
 
     @Test

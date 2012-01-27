@@ -1,0 +1,28 @@
+{
+    "activated":true,
+    "activationDate":1245675182000,
+    "blocked":false,
+    "email":"labs@gonow.com.br",
+    "id":730,
+    "login":"labs",
+    "password":"7580fecbf56ff5628587b782011bcb8e",
+    "profiles":[
+        {
+            "id":101,
+            "name":"desenhador",
+            "users":[{}]
+        }, {
+            "id":103,
+            "name":"suporte",
+            "users":[{}]
+        }, {
+            "id":104,
+            "name":"administrador",
+            "users":[{}]
+        }
+    ],
+    "registrationDate":1245675171000,
+    "username":"labs",
+    "valid":true,
+    "validUsername":true
+}

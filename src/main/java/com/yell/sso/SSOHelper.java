@@ -3,6 +3,7 @@ package com.yell.sso;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 public class SSOHelper {
 
@@ -31,8 +32,12 @@ public class SSOHelper {
         return ssoService.redirectUrlFor("http://localhost:8080/login.do");
     }
 
-    public void completeLogin(HttpServletResponse response, String key) {
-        SSOUser user = ssoService.completeLogin(key);
-        response.addCookie(new Cookie(SSO_COOKIE, user.getLogin()));
+    public void completeLogin(HttpServletResponse response, String key) throws SSOException {
+        try {
+            SSOUser user = ssoService.completeLogin(key);
+            response.addCookie(new Cookie(SSO_COOKIE, user.getLogin()));
+        } catch (IOException e) {
+            throw new SSOException("Error finalizing login (/user/show?key=xxx", e);
+        }
     }
 }
