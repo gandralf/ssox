@@ -1,0 +1,12 @@
+src/main/webapp/WEB-INF/classes/
+src/main/webapp/WEB-INF/lib/
+target
+.classpath
+.project
+.settings/
+.idea
+*.jar
+*.class
+.DS_Store
+*.thumb
+*.iml

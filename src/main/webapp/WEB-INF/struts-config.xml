@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+    <action-mappings>
+        <action path="/hello" type="com.yell.sso.demo.HelloAction">
+            <forward name="success" path="/hello.jsp" />
+        </action>
+        <action path="/login" type="com.yell.sso.LoginAction">
+            <forward name="success" path="/hello.do" />
+        </action>
+    </action-mappings>
+</struts-config>
